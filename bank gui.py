@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import messagebox
 import time
 root=tk.Tk()
-root.title="MY BANK"
+root.title("MY BANK")
 root.configure(background="BLACK")
 a=S=str(20000)
 
