@@ -13,3 +13,4 @@ server.sendmail('Sender_Email_address','Receiver_Email_address',
                 BRANCH:My Branch is -> ARTIFICIAL INTELLIGENCE AND DATA SCIENCE\n
                 COLLEGE:Arya College of Engineering\n
                 COLLEGE CITY:JAIPIR RAJASTHAN""")   # details Edit according to you 
+server.quit()
