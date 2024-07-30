@@ -1,48 +1,15 @@
-# import smtplib
-# from email.mime.multipart import MIMEMultipart
-# from email.mime.text import MIMEText
-
-# # Define the sender and receiver email addresses
-# sender_email = "rabni6392@gmail.com"
-# receiver_email = "rahulsaini132005@gmail.com"
-# password = "7014nisha86190rahul"
-
-# # Create the email subject and body
-# subject = "Test Email from Python"
-# body = "This is a test email sent from Python!"
-
-# # Create the email message
-# msg = MIMEMultipart()
-# msg['From'] = sender_email
-# msg['To'] = receiver_email
-# msg['Subject'] = subject
-
-# # Attach the body to the email
-# msg.attach(MIMEText(body, 'plain'))
-
-# # Set up the SMTP server
-# server = smtplib.SMTP('smtp.gmail.com', 587)
-# server.starttls()  # Enable TLS encryption
-# server.login(sender_email, password)  # Log in to the email account
-
-# # Send the email
-# text = msg.as_string()
-# server.sendmail(sender_email, receiver_email, text)
-
-# # Disconnect from the SMTP server
-# server.quit()
-
-# print("Email sent successfully!")
-
+""" password must be generated from google settings . Go to your google settings (Manage Your google account) . Go to security option
+ make sure your TWO STEP VERIFICATION is done .Then go through 'App password' and create a password for MAIL,  give name as you think.
+copy that password and paste where password written """
 
 import smtplib
 server=smtplib.SMTP('smtp.gmail.com',587)
 server.starttls()
-server.login('rahulsaini132005@gmail.com','halw icyd ffdo zogo')
-server.sendmail('rahulsaini132005@gmail.com','nishakumarisuman21@gmail.com',
-                """SUBJECT:MAIL THROUGH PYTHON\n
-                Namaste sir,\n
-                NAME:RAHUL SAINI \n
-                BRANCH:AI AND DS\n
-                COLLEGE:ARYA COLLEGE OF ENGINEERING\n
-                COLLEGE CITY:JAIPUR,RAJASTHAN""")
+server.login('Sender_Email_address','password')      # put your mail at the place of 'Sender_Email_address' and receiver mail address at 'Receiver_Email_address;
+server.sendmail('Sender_Email_address','Receiver_Email_address',    
+                """SUBJECT:MAIL THROUGH PYTHON\n     
+                Namaste SIR,\n
+                NAME:RAHUL SAINI  \n
+                BRANCH:My Branch is -> ARTIFICIAL INTELLIGENCE AND DATA SCIENCE\n
+                COLLEGE:Arya College of Engineering\n
+                COLLEGE CITY:JAIPIR RAJASTHAN""")   # details Edit according to you 
