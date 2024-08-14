@@ -1,0 +1,4 @@
+numpy
+padas
+falsk
+matplotlib
