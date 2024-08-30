@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Data Input</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg1.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .form-container {
+            width: 350px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #fff;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            outline: none;
+            transition: background 0.3s ease, border 0.3s ease;
+        }
+
+        .form-container input[type="text"]:focus,
+        .form-container input[type="number"]:focus {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: linear-gradient(45deg, #32cd32, #00fa9a);
+            border: none;
+            color: #fff;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background: linear-gradient(45deg, #00fa9a, #32cd32);
+            box-shadow: 0 6px 20px rgba(0, 255, 127, 0.4);
+        }
+
+        @media (max-width: 400px) {
+            .form-container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Welcome To Farm Data Input</h2>
+        <form action="/submit" method="POST">
+            <input type="number" name="nitrogen" placeholder="Nitrogen (N)" required>
+            
+            <input type="number" name="phosphorus" placeholder="Phosphorus (P)" required>
+            <input type="number" name="potassium" placeholder="Potassium (K)" required>
+            <input type="text" name="temperature" placeholder="Temperature (°C)" required>
+            <input type="text" name="humidity" placeholder="Humidity (%)" required>
+            <input type="text" name="ph" placeholder="pH" required>
+            <input type="text" name="rainfall" placeholder="Rainfall (mm)" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
